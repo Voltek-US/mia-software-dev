@@ -1,0 +1,28 @@
+{
+  "id": "mia-software-dev",
+  "name": "Mia Software Development",
+  "description": "Scaffold a structured front-end + back-end Node app on SQLite for a NON-technical user, secure-by-default (ask before exposing data, keys in env, escalate to Voltek). Board task 2E. Bundles the mia-software-dev skill (the rules) + scaffold tools. Does NOT modify the core.",
+  "version": "1.0.0",
+  "activation": {
+    "onStartup": true
+  },
+  "skills": ["./skills"],
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "projectsDir": {
+        "type": "string",
+        "description": "Directory where generated projects are scaffolded. Default: <workspace>/projects."
+      },
+      "defaultDatabase": {
+        "type": "string",
+        "enum": ["sqlite"],
+        "description": "Database for generated apps. SQLite by default (local file, nothing exposed)."
+      }
+    }
+  },
+  "contracts": {
+    "tools": ["scaffold_project", "add_table"]
+  }
+}
