@@ -10,7 +10,7 @@
  * index.js is the runnable entry OpenClaw loads; this file is the typed reference.
  */
 
-import { definePluginEntry } from "openclaw/plugin-sdk";
+import { definePluginEntry } from "openclaw/plugin-sdk/plugin-entry";
 import { homedir } from "node:os";
 import { join } from "node:path";
 import { existsSync, mkdirSync, writeFileSync, appendFileSync } from "node:fs";

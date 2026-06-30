@@ -16,7 +16,7 @@
  * reference; this .js is the entry OpenClaw loads.
  */
 
-import { definePluginEntry } from "openclaw/plugin-sdk";
+import { definePluginEntry } from "openclaw/plugin-sdk/plugin-entry";
 import { homedir } from "node:os";
 import { join } from "node:path";
 import { existsSync, mkdirSync, writeFileSync, readFileSync, appendFileSync } from "node:fs";
